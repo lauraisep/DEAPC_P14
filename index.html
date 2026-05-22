@@ -1,80 +1,369 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlanIt - Dashboard de Gestão de Projetos</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Projetos</title>
+  <style>
+    * {
+      font-family: monospace;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #1a1a2e;
+      color: #e0e0e0;
+    }
+
+    /* ── HEADER ── */
+    header h1 {
+      width: 100%;
+      text-align: center;
+      background-color: #16213e;
+      color: #00d4ff;
+      padding: 18px 0;
+      letter-spacing: 4px;
+      font-size: 1.4rem;
+      border-bottom: 2px solid #00d4ff;
+    }
+
+    /* ── LAYOUT ── */
+    #all {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-wrap {
+      display: flex;
+      flex: 1;
+    }
+
+    /* ── NAV ── */
+    nav {
+      float: left;
+      width: 22%;
+      min-height: calc(100vh - 60px);
+      background-color: #16213e;
+      border-right: 1px solid #00d4ff44;
+      padding-top: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      padding: 12px 16px;
+      border-bottom: 1px solid #ffffff15;
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: #aaa;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    nav ul li:hover,
+    nav ul li.active {
+      background-color: #00d4ff22;
+      color: #00d4ff;
+    }
+
+    nav ul li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ── CONTEÚDO ── */
+    #texto {
+      float: left;
+      width: 78%;
+      min-height: calc(100vh - 60px);
+      padding: 24px;
+      background-color: #1a1a2e;
+    }
+
+    #texto h2 {
+      color: #00d4ff;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #00d4ff44;
+      padding-bottom: 8px;
+    }
+
+    /* ── TABELA DE PROJETOS ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      margin-bottom: 24px;
+    }
+
+    thead tr {
+      background-color: #16213e;
+      color: #00d4ff;
+      text-align: left;
+    }
+
+    thead th {
+      padding: 10px 12px;
+      border: 1px solid #00d4ff33;
+      letter-spacing: 1px;
+    }
+
+    tbody tr {
+      border: 1px solid #ffffff10;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #16213e88;
+    }
+
+    tbody td {
+      padding: 10px 12px;
+      border: 1px solid #ffffff10;
+      color: #ccc;
+    }
+
+    /* ── BADGES DE ESTADO ── */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 2px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .badge-em-curso    { background: #00d4ff22; color: #00d4ff; border: 1px solid #00d4ff66; }
+    .badge-concluido   { background: #00ff9922; color: #00ff99; border: 1px solid #00ff9966; }
+    .badge-pendente    { background: #ffcc0022; color: #ffcc00; border: 1px solid #ffcc0066; }
+    .badge-atrasado    { background: #ff444422; color: #ff6666; border: 1px solid #ff444466; }
+
+    /* ── CARDS RESUMO ── */
+    .cards {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 120px;
+      background-color: #16213e;
+      border: 1px solid #00d4ff33;
+      padding: 14px 16px;
+      text-align: center;
+    }
+
+    .card .num {
+      font-size: 1.8rem;
+      color: #00d4ff;
+      display: block;
+    }
+
+    .card .label {
+      font-size: 0.72rem;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      clear: both;
+      background-color: #16213e;
+      border-top: 1px solid #00d4ff44;
+    }
+
+    .cr {
+      font-size: 75%;
+      text-align: center;
+      color: #555;
+      padding: 10px 0;
+      letter-spacing: 1px;
+    }
+
+    /* ── MEDIA QUERIES ── */
+    @media screen and (max-width: 960px) {
+      nav {
+        width: 28%;
+        font-size: 0.8rem;
+      }
+      #texto {
+        width: 72%;
+        padding: 16px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      body {
+        background-color: #12122a;
+      }
+      nav {
+        width: 100%;
+        float: none;
+        min-height: auto;
+      }
+      nav ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      nav ul li {
+        flex: 1;
+        text-align: center;
+        min-width: 100px;
+        border-right: 1px solid #ffffff15;
+      }
+      #texto {
+        width: 100%;
+        float: none;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      body {
+        background-color: #111122;
+        color: #ddd;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        width: 100%;
+        text-align: left;
+      }
+      #texto {
+        padding: 12px;
+      }
+      .cards {
+        flex-direction: column;
+      }
+      table {
+        font-size: 0.72rem;
+      }
+      .cr {
+        color: #00d4ff99;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <h2>PlanIt</h2>
-        </div>
-        <div class="user-info">
-            <span>Olá, <strong>Gestor do Projeto</strong></span>
-        </div>
-    </header>
+<div id="all">
 
-    <nav class="sidebar">
-        <ul>
-            <li><a href="index.html" class="ativo">Dashboard</a></li>
-            <li><a href="projetos.html">Projetos</a></li>
-            <li><a href="tarefas.html">Tarefas</a></li>
-            <li><a href="perfil.html">Perfil</a></li>
-        </ul>
+  <header>
+    <h1>// GESTÃO DE PROJETOS</h1>
+  </header>
+
+  <div class="main-wrap">
+
+    <nav>
+      <ul>
+        <li class="active"><a href="index.html">📁 Projetos</a></li>
+        <li><a href="equipa.html">👥 Equipa</a></li>
+        <li><a href="tarefas.html">📋 Tarefas</a></li>
+        <li><a href="calendario.html">📅 Calendário</a></li>
+        <li><a href="relatorios.html">📊 Relatórios</a></li>
+      </ul>
     </nav>
 
-    <main>
-        <section id="dashboard-overview">
-            <h1>Painel de Controlo</h1>
-            <p class="intro-text">Monitorização contínua do progresso e do estado das atividades da equipa.</p>
+    <div id="texto">
 
-            <div class="container-projetos">
-                <h3>Projetos Ativos</h3>
-                <table class="tabela-projetos">
-                    <thead>
-                        <tr>
-                            <th>Projeto</th>
-                            <th>Equipa</th>
-                            <th>Progresso</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Website DEAPC</td>
-                            <td>Grupo P14</td>
-                            <td><span class="progresso">75%</span></td>
-                        </tr>
-                        <tr>
-                            <td>Base de Dados</td>
-                            <td>Equipa Técnica</td>
-                            <td><span class="progresso">40%</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      <div class="cards">
+        <div class="card">
+          <span class="num">6</span>
+          <span class="label">Total</span>
+        </div>
+        <div class="card">
+          <span class="num">3</span>
+          <span class="label">Em Curso</span>
+        </div>
+        <div class="card">
+          <span class="num">2</span>
+          <span class="label">Concluídos</span>
+        </div>
+        <div class="card">
+          <span class="num">1</span>
+          <span class="label">Atrasado</span>
+        </div>
+      </div>
 
-            <div class="cards-projetos">
-                <div class="card">
-                    <h4>Website DEAPC</h4>
-                    <p><strong>Equipa:</strong> Grupo P14</p>
-                    <p><strong>Progresso:</strong> 75%</p>
-                </div>
-                <div class="card">
-                    <h4>Base de Dados</h4>
-                    <p><strong>Equipa:</strong> Equipa Técnica</p>
-                    <p><strong>Progresso:</strong> 40%</p>
-                </div>
-            </div>
+      <h2>LISTA DE PROJETOS</h2>
 
-        </section>
-    </main>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Projeto</th>
+            <th>Responsável</th>
+            <th>Prazo</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Website Institucional</td>
+            <td>Ana Silva</td>
+            <td>30/06/2025</td>
+            <td><span class="badge badge-em-curso">EM CURSO</span></td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>App Mobile</td>
+            <td>João Costa</td>
+            <td>15/05/2025</td>
+            <td><span class="badge badge-atrasado">ATRASADO</span></td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>Base de Dados CRM</td>
+            <td>Maria Ferreira</td>
+            <td>01/04/2025</td>
+            <td><span class="badge badge-concluido">CONCLUÍDO</span></td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td>Relatório Anual</td>
+            <td>Pedro Nunes</td>
+            <td>31/07/2025</td>
+            <td><span class="badge badge-pendente">PENDENTE</span></td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td>Campanha Marketing</td>
+            <td>Ana Silva</td>
+            <td>20/05/2025</td>
+            <td><span class="badge badge-em-curso">EM CURSO</span></td>
+          </tr>
+          <tr>
+            <td>06</td>
+            <td>Migração Servidores</td>
+            <td>João Costa</td>
+            <td>10/03/2025</td>
+            <td><span class="badge badge-concluido">CONCLUÍDO</span></td>
+          </tr>
+        </tbody>
+      </table>
 
-    <footer>
-        <p>Copyright 2026 @ DEAPC - Grupo P14 | <a href="#suporte">Suporte Técnico</a></p>
-    </footer>
+    </div><!-- #texto -->
+
+  </div><!-- .main-wrap -->
+
+  <footer>
+    <div class="cr">Copyright 2025 &copy; Gestão de Projetos</div>
+  </footer>
+
+</div><!-- #all -->
 
 </body>
 </html>
