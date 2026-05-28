@@ -1,0 +1,86 @@
+commit e86bc2925dc7cfbb47e034542bfb0dafef1eaba1
+Merge: 920453d f793053
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Fri May 22 13:01:32 2026 +0100
+
+    resolver conflito index
+
+commit 920453d56e59e405d9dd1e648e83bf753c072e81
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Fri May 22 12:59:53 2026 +0100
+
+    atualizar index e adicionar calendario
+
+commit f793053faaba64aeb1167e13466d4ee8a6e10660
+Author: helenateixeira142007 <helena.teixeira.142007@gmail.com>
+Date:   Fri May 22 12:59:05 2026 +0100
+
+     Criei a página da equipa
+
+commit 00009bd8a5f4f77f628fbea04864c4433991ccdd
+Author: lauraisep <lauraneumannr@gmail.com>
+Date:   Fri May 22 12:54:07 2026 +0100
+
+    Criei pagina tarefas
+
+commit d4dd165f2821f516a77b0758479d01a301612a8e
+Author: biabcarrascal <beatrizbcarrascal@gmail.com>
+Date:   Fri May 22 12:31:57 2026 +0100
+
+    Refactor index.html for project management dashboard
+
+commit a3da36755da9f25d02621cf64aa4aa97c5da4186
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Fri May 22 12:28:00 2026 +0100
+
+    Código do apoio ao guião mas com cores e tipo de letra diferente
+
+commit b48c18245e2b448dbacf5cbea172b2fa863e45af
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Mon May 18 17:35:56 2026 +0100
+
+    Estive a mudar o tipo de letra, para ficar mais bonitinho
+
+commit 4aea33eda3ebeeda885755a630b6388c1d8761f8
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Mon May 18 17:22:27 2026 +0100
+
+    Adicionei index.html do PlanIt
+
+commit dee4d2b82a175fd79463b91cfbe5499d1f567d24
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Mon May 18 17:19:14 2026 +0100
+
+    Havemos algo - primeiríssima versão
+
+commit dff25dc5103e98a920bdfc36edb98ef867324ff6
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Mon May 18 17:16:32 2026 +0100
+
+    Revert "Atualiza o nome da aplicação para PlanIt no cabeçalho"
+    
+    This reverts commit f3e2d56db8cdcff8bc2ac6d92cce46b54fa26097.
+
+commit f3e2d56db8cdcff8bc2ac6d92cce46b54fa26097
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Mon May 18 17:15:10 2026 +0100
+
+    Atualiza o nome da aplicação para PlanIt no cabeçalho
+
+commit f031f6776f67fa9819234806cfa232f0a4e5b2b2
+Author: lauraisep <lauraneumannr@gmail.com>
+Date:   Fri May 15 12:42:10 2026 +0100
+
+    2.1
+
+commit d1e9cb16782b546501fa9e2eea0b3afdc00fd730
+Author: lauraisep <lauraneumannr@gmail.com>
+Date:   Fri May 15 12:07:45 2026 +0100
+
+    teste1
+
+commit 07666924da7ad9d388daf88686384935411040df
+Author: lauraisep <lauraneumannr@gmail.com>
+Date:   Fri May 15 11:45:42 2026 +0100
+
+    Initial commit
