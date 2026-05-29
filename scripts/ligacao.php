@@ -1,12 +1,12 @@
 <?php
-$host = "localhost";
-$user = "root";       // Se na aula usaram outro utilizador, altera aqui
-$pass = "";           // Se a vossa BD tiver password, coloca-a aqui
-$db   = "deapc";      // Substitui pelo nome real da vossa Base de Dados
+// Ativar erros para ajudar a detetar falhas
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
-$conn = new mysqli($host, $user, $pass, $db);
-
-if ($conn->connect_error) {
-    die("Falha na ligação à base de dados: " . $conn->connect_error);
+try {
+    // Liga-se ao ficheiro SQLite criado pela tua amiga
+    $ligacao = new SQLite3(__DIR__ . '/projeto.db');
+} catch (Exception $e) {
+    die("Falha na ligação à base de dados: " . $e->getMessage());
 }
 ?>

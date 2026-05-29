@@ -1,54 +1,52 @@
 <?php
 session_start();
-require_once 'ligacao.php';
+include_once 'ligacao.php';
 
-// Proteção: Se não tiver sessão, manda para o index
+// Se não estiver logado, manda para o login
 if (!isset($_SESSION['utilizador'])) {
-    die("<h3>Acesso negado. Por favor, faça login.</h3><a href='../index.html'>Ir para o Login</a>");
+    header("Location: ../login.html");
+    exit();
 }
 
-// 8c. Consulta dos registos de acesso
-$sql = "SELECT username, ultimo_acesso FROM utilizadores";
-$result = $conn->query($sql);
+$user = $_SESSION['utilizador'];
+
+// Procura o último acesso na base de dados SQLite
+$stmt = $ligacao->prepare("SELECT ultimo_acesso FROM utilizadores WHERE username = :user");
+$stmt->bindValue(':user', $user, SQLITE3_TEXT);
+$resultado = $stmt->execute();
+$dados = $resultado->fetchArray(SQLITE3_ASSOC);
 ?>
 
 <!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Registos de Acesso</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <title>Consulta de Acessos</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f9; padding: 40px; }
+        .container { background: white; padding: 30px; border-radius: 8px; max-width: 450px; margin: 0 auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+        .info-box { background: #e9ecef; padding: 15px; border-radius: 6px; border-left: 5px solid #28a745; margin: 20px 0; }
+        a { color: #007bff; text-decoration: none; font-weight: bold; }
+    </style>
 </head>
 <body>
-    <div style="padding: 20px;">
-        <h2>Bem-vindo, <?php echo $_SESSION['utilizador']; ?>!</h2>
-        <h3>Registos de Acesso dos Utilizadores</h3>
 
-        <table border="1" cellpadding="10" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>Utilizador</th>
-                    <th>Último Acesso</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                if ($result && $result->num_rows > 0) {
-                    while($row = $result->fetch_assoc()) {
-                        echo "<tr>";
-                        echo "<td>" . $row['username'] . "</td>";
-                        $data = $row['ultimo_acesso'] ? $row['ultimo_acesso'] : "Nunca acedeu";
-                        echo "<td>" . $data . "</td>";
-                        echo "</tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan='2'>Nenhum registo encontrado.</td></tr>";
-                }
-                ?>
-            </tbody>
-        </table>
-
-        <p><br><a href="logout.php">Terminar Sessão (Sair)</a></p>
+<div class="container">
+    <h2>Histórico de Acessos (Exercício 8c)</h2>
+    <p>Utilizador: <strong><?php echo htmlspecialchars($user); ?></strong></p>
+    
+    <div class="info-box">
+        <strong>Último acesso registado:</strong><br>
+        <?php 
+        if (!empty($dados['ultimo_acesso']) && $dados['ultimo_acesso'] !== 'Nunca') {
+            echo date('d/m/Y às H:i:s', strtotime($dados['ultimo_acesso']));
+        } else {
+            echo "Este é o teu primeiro acesso.";
+        }
+        ?>
     </div>
+    <p><a href="../index.html">Página Principal</a> | <a href="logout.php" style="color: #dc3545;">Sair</a></p>
+</div>
+
 </body>
 </html>

@@ -7,27 +7,23 @@ error_reporting(E_ALL);
 try {
     // 2. Estabelecer a ligação/criação do ficheiro da base de dados SQLite3
     // O ficheiro será criado automaticamente na mesma pasta do script
-    $db = new SQLite3('projeto.db');
+    $db = new SQLite3(__DIR__ . '/projeto.db');
     echo "Ligação à base de dados estabelecida com sucesso!<br>";
 
-    // 3. Definir a query SQL para criar a tabela de utilizadores
-    // Inclui: id (Chave Primária), username, password e o registo do ultimo_acesso
+    // 3. Definir a query SQL CORRETA para criar a tabela de utilizadores
+    // Mudámos 'NOT EXISTS' para 'NOT NULL' para corrigir o erro de sintaxe
     $sql_utilizadores = "CREATE TABLE IF NOT EXISTS utilizadores (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        username TEXT NOT EXISTS UNIQUE,
-        password TEXT NOT EXISTS,
+        username TEXT NOT NULL UNIQUE,
+        password TEXT NOT NULL,
         ultimo_acesso TEXT
     );";
 
     // 4. Executar a query de criação utilizando o método exec() (Exemplo da pág. 9 do Doc de Apoio)
-    if ($db->exec($sql_utilizadores)) {
-        echo "Tabela 'utilizadores' criada com sucesso!<br>";
-    } else {
-        echo "Erro ao criar a tabela.<br>";
-    }
+    $db->exec($sql_utilizadores);
+    echo "Tabela 'utilizadores' criada com sucesso (ou já existia)!<br>";
 
-    // 5. Opcional: Inserir um utilizador de teste (com password em texto limpo para o exercício 8a)
-    // Usamos INSERT INTO e exec() conforme exemplificado no documento de apoio
+    // 5. Inserir os utilizadores de teste se a tabela estiver vazia
     $check_empty = $db->querySingle("SELECT COUNT(*) FROM utilizadores");
     if ($check_empty == 0) {
         $db->exec("INSERT INTO utilizadores (username, password, ultimo_acesso) 
@@ -35,6 +31,8 @@ try {
         $db->exec("INSERT INTO utilizadores (username, password, ultimo_acesso) 
                    VALUES ('aluno', 'isep2026', 'Nunca')");
         echo "Utilizadores de teste inseridos com sucesso!<br>";
+    } else {
+        echo "A tabela já continha utilizadores registados.<br>";
     }
 
     // 6. Fechar a ligação libertando o objeto (pág. 9 do Doc de Apoio)

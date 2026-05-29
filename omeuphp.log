@@ -1,0 +1,153 @@
+commit c81ba2bde59e53af7b782d4b37f57c171c405c41
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Fri May 29 12:57:05 2026 +0100
+
+    Criação da linda base de dados
+
+commit 91de0c4fd06dabfab31d352bae34e7ecd12094a6
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Fri May 29 12:44:42 2026 +0100
+
+    Tinha me esquecido de um }
+
+commit 5d534e3dab78e830087b271d5265af7f58c1e139
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Fri May 29 12:40:42 2026 +0100
+
+    Atualizei o CSS
+
+commit 1369f309f3fffceb2621ce12477c2b4040e5dec7
+Merge: 61bded9 e461847
+Author: lauraisep <lauraneumannr@gmail.com>
+Date:   Fri May 29 12:15:12 2026 +0100
+
+    Merge branch 'main' of https://github.com/lauraisep/DEAPC_P14
+
+commit 61bded9fb1a2f89c29df2bc21688e624154080b3
+Author: lauraisep <lauraneumannr@gmail.com>
+Date:   Fri May 29 12:11:27 2026 +0100
+
+    Exercício 8
+
+commit e4618477c3636e6e4239e1897184e6647cc6d3b0
+Author: helenateixeira142007 <helena.teixeira.142007@gmail.com>
+Date:   Fri May 29 11:59:43 2026 +0100
+
+    Exercício 5 concluído com scripts de debug do professor
+
+commit 3f64884d0a93b7d5705d21bf09bca1e81a52cabc
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Fri May 29 11:35:59 2026 +0100
+
+    adicionei pasta dos scripts
+
+commit 46f2ce0e1f30ae01761b076b7988f616eecece78
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Thu May 28 17:44:56 2026 +0100
+
+    Coloquei uma tarefa hipotetica atribuida a cada utilizador, como ja tim«nhamos feito, e coloquei uma ligação ao google calendar e ao calendario do outlook
+
+commit dd09368b469baade57fbec2d1340b5a37fdcafc6
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Thu May 28 16:38:09 2026 +0100
+
+    adicionar pasta scripts para ficheiros PHP
+
+commit a373ff15540f1ee8cb2c12c0c8f8aa6794ec47ef
+Author: lauraisep <lauraneumannr@gmail.com>
+Date:   Fri May 22 13:14:55 2026 +0100
+
+    Alterei os nomes
+
+commit b8f349063fef919eb4f31a022f721829fa0502b6
+Author: lauraisep <lauraneumannr@gmail.com>
+Date:   Fri May 22 13:08:56 2026 +0100
+
+    Alterei os nomes
+
+commit e86bc2925dc7cfbb47e034542bfb0dafef1eaba1
+Merge: 920453d f793053
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Fri May 22 13:01:32 2026 +0100
+
+    resolver conflito index
+
+commit 920453d56e59e405d9dd1e648e83bf753c072e81
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Fri May 22 12:59:53 2026 +0100
+
+    atualizar index e adicionar calendario
+
+commit f793053faaba64aeb1167e13466d4ee8a6e10660
+Author: helenateixeira142007 <helena.teixeira.142007@gmail.com>
+Date:   Fri May 22 12:59:05 2026 +0100
+
+     Criei a página da equipa
+
+commit 00009bd8a5f4f77f628fbea04864c4433991ccdd
+Author: lauraisep <lauraneumannr@gmail.com>
+Date:   Fri May 22 12:54:07 2026 +0100
+
+    Criei pagina tarefas
+
+commit d4dd165f2821f516a77b0758479d01a301612a8e
+Author: biabcarrascal <beatrizbcarrascal@gmail.com>
+Date:   Fri May 22 12:31:57 2026 +0100
+
+    Refactor index.html for project management dashboard
+
+commit a3da36755da9f25d02621cf64aa4aa97c5da4186
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Fri May 22 12:28:00 2026 +0100
+
+    Código do apoio ao guião mas com cores e tipo de letra diferente
+
+commit b48c18245e2b448dbacf5cbea172b2fa863e45af
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Mon May 18 17:35:56 2026 +0100
+
+    Estive a mudar o tipo de letra, para ficar mais bonitinho
+
+commit 4aea33eda3ebeeda885755a630b6388c1d8761f8
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Mon May 18 17:22:27 2026 +0100
+
+    Adicionei index.html do PlanIt
+
+commit dee4d2b82a175fd79463b91cfbe5499d1f567d24
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Mon May 18 17:19:14 2026 +0100
+
+    Havemos algo - primeiríssima versão
+
+commit dff25dc5103e98a920bdfc36edb98ef867324ff6
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Mon May 18 17:16:32 2026 +0100
+
+    Revert "Atualiza o nome da aplicação para PlanIt no cabeçalho"
+    
+    This reverts commit f3e2d56db8cdcff8bc2ac6d92cce46b54fa26097.
+
+commit f3e2d56db8cdcff8bc2ac6d92cce46b54fa26097
+Author: biabc <biabcarrascal@gmail.com>
+Date:   Mon May 18 17:15:10 2026 +0100
+
+    Atualiza o nome da aplicação para PlanIt no cabeçalho
+
+commit f031f6776f67fa9819234806cfa232f0a4e5b2b2
+Author: lauraisep <lauraneumannr@gmail.com>
+Date:   Fri May 15 12:42:10 2026 +0100
+
+    2.1
+
+commit d1e9cb16782b546501fa9e2eea0b3afdc00fd730
+Author: lauraisep <lauraneumannr@gmail.com>
+Date:   Fri May 15 12:07:45 2026 +0100
+
+    teste1
+
+commit 07666924da7ad9d388daf88686384935411040df
+Author: lauraisep <lauraneumannr@gmail.com>
+Date:   Fri May 15 11:45:42 2026 +0100
+
+    Initial commit
