@@ -257,4 +257,4 @@ table tr:last-child td {
     border: none !important;
 }
 
-.badge-em-curso  { background: var(--em-curso-bg) !important; color: var(--em-curso-txt) !important;
+.badge-em-curso  { background: var(--em-curso-bg) !important; color: var(--em-curso-txt) !important;}
