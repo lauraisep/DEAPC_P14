@@ -2,6 +2,21 @@
    STYLES.CSS — Gestão de Projetos
    ══════════════════════════════════════════ */
 
+/* ── BOTÃO DE LOGIN DO CABEÇALHO ── */
+.login-container {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.btn-login {
+  background: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 /* ── RESET & BASE ── */
 * {
   font-family: monospace;
@@ -16,6 +31,16 @@ body {
 }
 
 /* ── HEADER ── */
+/* Procura o link que está dentro do parágrafo do header */
+header p a {
+  background: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 header h1 {
   width: 100%;
   text-align: center;
