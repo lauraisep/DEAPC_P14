@@ -3,23 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Login - Gestão de Projetos</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css"> 
+    <style>
+        /* Estilos simples para centrar a caixa de login no ecrã */
+        .login-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .login-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 350px;
+        }
+        .login-card h2 { margin-bottom: 20px; text-align: center; color: #333; }
+        .input-group { margin-bottom: 15px; }
+        .input-group label { display: block; margin-bottom: 5px; color: #666; }
+        .input-group input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .login-btn { width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        .login-btn:hover { background-color: #0056b3; }
+    </style>
 </head>
 <body class="login-body">
 
     <div class="login-card">
         <h2>Área de Login</h2>
         
-        <form action="scripts/login.php" method="POST">
+        <form id="meuFormularioID" action="scripts/login.php" method="POST">
             <div class="input-group">
                 <label for="username">Utilizador:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="nome" name="username">
             </div>
             
             <div class="input-group">
-                <label for="password">Palavra-passe:</label>
-                <input type="password" id="password" name="password" required>
+                <label for="password">Palavra-passe (Idade de Teste):</label>
+                <input type="text" id="idade" name="password">
             </div>
+            
+            <p id="mensagem-erro" style="color: red; font-weight: bold; text-align: center; font-size: 14px; margin: 10px 0;"></p>
             
             <button type="submit" class="login-btn">Entrar</button>
         </form>
@@ -29,5 +57,6 @@
         </p>
     </div>
 
+    <script src="scripts/validacoes.js"></script>
 </body>
 </html>
