@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acessos</title>
+</head>
+<body>
+
+    <h1>Lista de Acessos</h1>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>IP</th>
+            <th>Data e Hora</th>
+        </tr>
+
+        <?php while ($linha = $dados->fetchArray()): ?>
+        <tr>
+            <td><?= $linha['id'] ?></td>
+            <td><?= $linha['ip_utilizador'] ?></td>
+            <td><?= $linha['data_acesso'] ?></td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
+
+</body>
+</html>
