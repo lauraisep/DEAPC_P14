@@ -42,4 +42,12 @@ document.addEventListener("DOMContentLoaded", function() {
     if (formulario) {
         formulario.addEventListener("submit", validarFormulario);
     }
+
+    let botao = document.getElementById("btn-sobre");
+    let texto = document.getElementById("info-grupo");
+    if (botao && texto) {
+        botao.addEventListener("click", function() {
+            texto.hidden = !texto.hidden;
+        });
+    }
 });
