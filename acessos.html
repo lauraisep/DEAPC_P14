@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Acessos</title>
-</head>
-<body>
+<head> // Início do cabeçalho do documento 
+    <title>Acessos</title> //Define o título da página
+</head> // Fim do cabeçalho do documento 
+<body> // Início do corpo do documento 
 
-    <h1>Lista de Acessos</h1>
+    <h1>Lista de Acessos</h1> // Título principal da página
 
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>IP</th>
-            <th>Data e Hora</th>
-        </tr>
+    <table border="1"> // Início da tabela com borda de 1 pixel
+        <tr> // Início da linha de cabeçalho da tabela
+            <th>ID</th> // Cabeçalho da coluna para o ID
+            <th>IP</th> // Cabeçalho da coluna para o IP do usuário
+            <th>Data e Hora</th> // Cabeçalho da coluna para a data e hora do acesso
+        </tr> // Fim da linha de cabeçalho da tabela
 
-        <?php while ($linha = $dados->fetchArray()): ?>
-        <tr>
-            <td><?= $linha['id'] ?></td>
-            <td><?= $linha['ip_utilizador'] ?></td>
-            <td><?= $linha['data_acesso'] ?></td>
-        </tr>
-        <?php endwhile; ?>
-    </table>
+        <?php while ($linha = $dados->fetchArray()): ?> // While para percorrer os dados dos acessos; fetchArray() vai à variável $dados (consulta da Base de Dados) e extrai um registo de cada vez, guardando-o na variável $linha
+        <tr> // Início de uma nova linha para cada acesso
+            <td><?= $linha['id'] ?></td> // Exibe o ID do acesso, utilizando o atalho (<?=) do PHP para imprimir o valor da coluna 'id' do registro atual 
+            <td><?= $linha['ip_utilizador'] ?></td> // Exibe o IP do usuário, utilizando o atalho (<?=) do PHP para imprimir o valor da coluna 'ip_utilizador' do registro atual
+            <td><?= $linha['data_acesso'] ?></td> // Exibe a data e hora do acesso, utilizando o atalho (<?=) do PHP para imprimir o valor da coluna 'data_acesso' do registro atual
+        </tr> // Fim da linha para cada acesso
+        <?php endwhile; ?> // Fim do while que percorre os dados dos acessos
+    </table> // Fim da tabela
 
-</body>
-</html>
+</body> // Fim do corpo do documento
+</html> 
