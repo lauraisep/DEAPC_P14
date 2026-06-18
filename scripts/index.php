@@ -1,6 +1,5 @@
 <?php
-// Força a exibição de falhas e avisos do PHP em tempo de execução
-ini_set('display_errors', 1);
+ini_set('display_errors', 1); // Exibição de erros (explicado no 'acessos.php')
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 

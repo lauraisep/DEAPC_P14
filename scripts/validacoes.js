@@ -1,15 +1,15 @@
 // Declaração da função principal de validação que recebe o evento de submissão do formulário por parâmetro
 function validarFormulario(event) {
-    // Procura na página e guarda numa variável o elemento input correspondente ao campo de utilizador
+    // document representa a página HTML, getElementById permite selecionar um elemento pelo seu ID (neste caso "username")
     let campoNome = document.getElementById("username");
     // Procura na página e guarda numa variável o elemento input correspondente ao campo de palavra-passe
     let campoSenha = document.getElementById("password");
-    // Localiza o parágrafo ou div reservado para renderizar alertas visuais de erro e guarda numa variável
+    //busca o elemento HTML com o ID "mensagem-erro" para exibir mensagens de erro
     let mensagemErro = document.getElementById("mensagem-erro");
     // Declara uma variável booleana para controlar a validade do formulário
     let valido = true;
 
-    // Limpa qualquer mensagem de erro antiga que tenha ficado escrita no contentor de mensagens de erro
+    // Limpa qualquer mensagem de erro antiga que tenha ficado escrita no contentor de mensagens de erro antes de tentar validar novamente, o innerHTML permite alterar o conteúdo HTML interno de um elemento
     mensagemErro.innerHTML = "";
 
     // Verifica se o campo de texto do username está vazio, limpando espaços em branco extras nas pontas (.trim())
@@ -20,8 +20,8 @@ function validarFormulario(event) {
         campoNome.style.backgroundColor = "#ffe6e6";
         // Define o estado global da validação atual como falso, indicando que o formulário não é válido para submissão
         valido = false;
-    } else {
-        // Restaura a cor da borda original caso o utilizador tenha preenchido corretamente o campo
+    } else { //caso o utilizador tenha preenchido corretamente o campo
+        // Restaura a cor da borda original 
         campoNome.style.borderColor = "";
         // Restaura a cor de fundo padrão do elemento
         campoNome.style.backgroundColor = "";
@@ -35,7 +35,7 @@ function validarFormulario(event) {
         mensagemErro.innerHTML = "O campo Palavra-passe é obrigatório!";
         valido = false;
     } 
-    // Se o campo não estiver vazio, valida se o comprimento da string digitada tem menos do que 4 caracteres
+    // Se o campo não estiver vazio, testa se o comprimento da string digitada tem menos do que 4 caracteres
     else if (campoSenha.value.length < 4) {
         // Altera a borda do campo para laranja sinalizando um aviso de segurança fraca
         campoSenha.style.borderColor = "orange";
@@ -67,9 +67,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // Intercepta a tentativa de submissão do formulário ("submit") e delega a execução para a função 'validarFormulario'
         formulario.addEventListener("submit", validarFormulario);
     }
-// Procura por um eventual botão de informações institucionais do grupo de projeto
+    // Procura por um eventual botão de informações institucionais do grupo de projeto
     let botao = document.getElementById("btn-sobre");
-    // Procura pelo contentor que exibe o texto descritivo do grupo
+    //cria uma variável para armazenar o elemento HTML que contém as informações do grupo
     let texto = document.getElementById("info-grupo");
     // Verifica a existência de ambos os componentes na árvore de elementos da página atual
     if (botao && texto) {

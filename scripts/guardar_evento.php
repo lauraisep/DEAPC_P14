@@ -1,13 +1,14 @@
 <?php
-ini_set('display_errors', 1);
+ini_set('display_errors', 1); // Exibição de erros (explicado no 'acessos.php')
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Título de log associado à User Story 3 (Módulo de Calendário)
+// Exibe título marcando que este script simula a User Story 3 (Módulo de Calendário)
 echo "<h2>[DEBUG US3] Script Guardar Evento</h2>";
 
+// Verifica se os dados foram enviados através do método seguro POST (vindo de um formulário)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Filtra e isola o campo com o título/nome do evento agendado
+    // Recolhe o valor do campo 'titulo_evento'. O operador '??' define o texto padrão 'Não inserido' se o campo estiver vazio    
     $evento = $_POST['titulo_evento'] ?? 'Não inserido';
     // Captura o input de tipo data recolhido da interface do calendário
     $data = $_POST['data_evento'] ?? 'Não inserido';
