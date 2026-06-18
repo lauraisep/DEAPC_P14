@@ -1,129 +1,129 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestão de Projetos</title>
-  <link rel="stylesheet" href="styles/style.css">
-  <script src="scripts/validacoes.js"></script>
-</head>
-<body>
+<!DOCTYPE html>//Diz ao navegador que este é um documento HTML5 (a versão mais recente).
+<html>//A tag principal que guarda todo o código da página.
+<head>//O cabeçalho da página. Aqui ficam as configurações escondidas que o utilizador não vê no ecrã.
+  <meta charset="UTF-8">//Garante que os acentos (como á, ç, õ) aparecem bem e sem erros no site.
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">//Faz com que o site se adapte bem ao tamanho de qualquer ecrã, como telemóveis ou computadores.
+  <title>Gestão de Projetos</title>//Define o título que aparece na aba/guia do navegador de internet.
+  <link rel="stylesheet" href="styles/style.css">//Liga a página ao ficheiro de estilos (CSS) para dar cores, mudar as letras e pôr o site bonito.
+  <script src="scripts/validacoes.js"></script>//Chama um ficheiro de código (JavaScript) para adicionar funções interativas à página.
+</head>//Fecha a zona de configurações.
+<body>//O corpo do site. Tudo o que estiver aqui dentro vai aparecer escrito ou desenhado no ecrã.
 
-<div id="all">
-  <header>
-    <h1>// GESTÃO DE PROJETOS</h1>
-    <div class="login-container">
-      <a href="login.html" class="btn-login">Entrar / Login</a>
-    </div>
-  </header>
+<div id="all">//Uma caixa gigante que junta o site todo lá dentro para ser mais fácil de organizar.
+  <header>//A parte de cima (o topo) do site.
+    <h1>// GESTÃO DE PROJETOS</h1>//O título maior e mais importante da página.
+    <div class="login-container">//Uma caixinha no topo para guardar o botão de entrar no site.
+      <a href="login.html" class="btn-login">Entrar / Login</a>//Um botão com um link que leva o utilizador para a página de login (login.html).
+    </div>//Fecha a caixinha do botão de login.
+  </header>//Fecha a parte de cima do site.
 
-  <div class="main-wrap">
+  <div class="main-wrap">//Uma caixa que junta o menu e as informações para ficarem bem arrumadas no ecrã.
 
-    <nav>
-      <ul>
-        <li class="active"><a href="index.html">📁 Projetos</a></li>
-        <li><a href="equipa.html">👥 Equipa</a></li>
-        <li><a href="tarefas.html">📋 Tarefas</a></li>
-        <li><a href="calendario.html">📅 Calendário</a></li>
-      </ul>
-    </nav>
+    <nav>//Indica que ali está o menu de navegação do site.  
+      <ul>//Começa uma lista de tópicos (com pontos).
+        <li class="active"><a href="index.html">📁 Projetos</a></li>//O primeiro botão do menu, marcado com a classe "active" para mostrar que estamos na página atual de Projetos.
+        <li><a href="equipa.html">👥 Equipa</a></li>//O segundo botão do menu, que leva à página da Equipa.
+        <li><a href="tarefas.html">📋 Tarefas</a></li>//O terceiro botão do menu, que leva à página das Tarefas.  
+        <li><a href="calendario.html">📅 Calendário</a></li>//O quarto botão do menu, que leva à página do Calendário.
+      </ul>//Fecha a lista do menu.
+    </nav>//Fecha o menu de navegação.
 
-    <div id="texto">
+    <div id="texto">//Uma caixa para guardar as informações principais desta página.
 
-      <div class="cards">
-        <div class="card">
-          <span class="num">6</span><br>
-          <span class="label">Total</span>
-        </div>
-        <div class="card">
-          <span class="num">3</span><br>
-          <span class="label">Em Curso</span>
-        </div>
-        <div class="card">
-          <span class="num">2</span><br>
-          <span class="label">Concluídos</span>
-        </div>
-        <div class="card">
-          <span class="num">1</span><br>
-          <span class="label">Atrasado</span>
-        </div>
-      </div>
+      <div class="cards">//Uma caixa para agrupar pequenos cartões com resumos de números.
+        <div class="card">//Cria o primeiro pequeno cartão para a contagem de projetos.
+          <span class="num">6</span><br>//Mostra o número 6 destacado e salta uma linha.
+          <span class="label">Total</span>//Escreve o texto explicativo "Total" abaixo do número.
+        </div>//Fecha o primeiro cartão de resumo.
+        <div class="card">//Cria o segundo pequeno cartão.
+          <span class="num">3</span><br>//Mostra o número 3 destacado e salta uma linha.
+          <span class="label">Em Curso</span>//Escreve o texto explicativo para os projetos a decorrer.
+        </div>//Fecha o segundo cartão de resumo.
+        <div class="card">//Cria o terceiro pequeno cartão.
+          <span class="num">2</span><br>//Mostra o número 2 destacado e salta uma linha.  
+          <span class="label">Concluídos</span>//Escreve o texto explicativo para os projetos já terminados.
+        </div>//Fecha o terceiro cartão de resumo.  
+        <div class="card">//Cria o quarto pequeno cartão.
+          <span class="num">1</span><br>//Mostra o número 1 destacado e salta uma linha.
+          <span class="label">Atrasado</span>//Escreve o texto explicativo para o projeto fora do prazo.
+        </div>//Fecha o quarto cartão de resumo.
+      </div>//Fecha a caixa que juntava todos os quatro cartões de números.
 
-      <button type="button" id="btn-sobre">Sobre o Projeto</button>
+      <button type="button" id="btn-sobre">Sobre o Projeto</button>//Cria um botão clicável que serve para mostrar mais informações sobre o projeto.
       
-      <p id="info-grupo" hidden>
-        <strong>Projeto DEAPC - Gestão de Projetos</strong><br>
-        O principal objetivo da aplicação é otimizar a gestão de projetos através de uma plataforma centralizada. O sistema permite reunir dados de projetos, equipas e tarefas no mesmo espaço, garantindo a atualização das listas de tarefas e a monitorização contínua do progresso e do estado das atividades.<br>
-        <strong>Grupo:</strong> Laura Ribeiro, Beatriz Carrascal, Helena Teixeira<br>
-      </p>
+      <p id="info-grupo" hidden>//Cria um parágrafo com um identificador, que começa escondido (hidden) e só aparece quando se clica no botão anterior.
+        <strong>Projeto DEAPC - Gestão de Projetos</strong><br>// Nome do projeto destacado em negrito e salta uma linha.  
+        O principal objetivo da aplicação é otimizar a gestão de projetos através de uma plataforma centralizada. O sistema permite reunir dados de projetos, equipas e tarefas no mesmo espaço, garantindo a atualização das listas de tarefas e a monitorização contínua do progresso e do estado das atividades.<br>//Texto normal que explica o que faz o sistema e salta uma linha no fim.  
+        <strong>Grupo:</strong> Laura Ribeiro, Beatriz Carrascal, Helena Teixeira<br>//Mostra a palavra "Grupo:" a negrito e lista os nomes das pessoas.
+      </p>//Fecha o parágrafo de informações escondidas.
 
-      <h2>LISTA DE PROJETOS</h2>
+      <h2>LISTA DE PROJETOS</h2>//Um título médio para identificar a tabela de projetos.
 
-      <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Projeto</th>
-            <th>Responsável</th>
-            <th>Prazo</th>
-            <th>Estado</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>01</td>
-            <td>Website Institucional</td>
-            <td>Laura Ribeiro</td>
-            <td>30/06/2025</td>
-            <td><span class="badge badge-em-curso">EM CURSO</span></td>
-          </tr>
-          <tr>
-            <td>02</td>
-            <td>App Mobile</td>
-            <td>Beatriz Carrascal</td>
-            <td>15/05/2025</td>
-            <td><span class="badge badge-atrasado">ATRASADO</span></td>
-          </tr>
-          <tr>
-            <td>03</td>
-            <td>Base de Dados CRM</td>
-            <td>Helena Teixeira</td>
-            <td>01/04/2025</td>
-            <td><span class="badge badge-concluido">CONCLUÍDO</span></td>
-          </tr>
-          <tr>
-            <td>04</td>
-            <td>Relatório Anual</td>
-            <td>Zara Larsson</td>
-            <td>31/07/2025</td>
-            <td><span class="badge badge-pendente">PENDENTE</span></td>
-          </tr>
-          <tr>
-            <td>05</td>
-            <td>Campanha Marketing</td>
-            <td>Laura Ribeiro</td>
-            <td>20/05/2025</td>
-            <td><span class="badge badge-em-curso">EM CURSO</span></td>
-          </tr>
-          <tr>
-            <td>06</td>
-            <td>Migração Servidores</td>
-            <td>Beatriz Carrascal</td>
-            <td>10/03/2025</td>
-            <td><span class="badge badge-concluido">CONCLUÍDO</span></td>
-          </tr>
-        </tbody>
-      </table>
+      <table>//Cria uma tabela para organizar a informação em linhas e colunas.
+        <thead>//Abre a zona do cabeçalho da tabela (os títulos das colunas).
+          <tr>//Cria a linha de títulos da tabela.
+            <th>#</th>//Define a coluna para o número do projeto.
+            <th>Projeto</th>//Define a coluna para o nome do projeto.  
+            <th>Responsável</th>//Define a coluna para o nome do responsável.
+            <th>Prazo</th>//Define a coluna para a data de entrega.
+            <th>Estado</th>//Define a coluna para o andamento do projeto.
+          </tr>//Fecha a linha de títulos da tabela.
+        </thead>//Fecha a zona do cabeçalho da tabela.
+        <tbody>//Abre o corpo da tabela, onde vão ficar as linhas com as informações reais.
+          <tr>//Cria a primeira linha de dados.
+            <td>01</td>//Número do primeiro projeto.
+            <td>Website Institucional</td>//Nome do primeiro projeto.  
+            <td>Laura Ribeiro</td>//Nome do responsável.
+            <td>30/06/2025</td>//Data de prazo.
+            <td><span class="badge badge-em-curso">EM CURSO</span></td>//Mostra o estado atual com uma etiqueta colorida.  
+          </tr>//Fecha a primeira linha.
+          <tr>//Cria a segunda linha de dados.
+            <td>02</td>//Número do segundo projeto.
+            <td>App Mobile</td>//Nome do segundo projeto.  
+            <td>Beatriz Carrascal</td>//Nome do responsável.
+            <td>15/05/2025</td>//Data de prazo.  
+            <td><span class="badge badge-atrasado">ATRASADO</span></td>//Mostra o estado com uma etiqueta de atraso.
+          </tr>//Fecha a segunda linha.
+          <tr>//Cria a terceira linha de dados.
+            <td>03</td>//Número do terceiro projeto.
+            <td>Base de Dados CRM</td>//Nome do terceiro projeto.
+            <td>Helena Teixeira</td>//Nome do responsável.
+            <td>01/04/2025</td>//Data de prazo.
+            <td><span class="badge badge-concluido">CONCLUÍDO</span></td>//Mostra o estado com uma etiqueta de terminado.
+          </tr>//Fecha a terceira linha.
+          <tr>//Cria a quarta linha de dados.
+            <td>04</td>//Número do quarto projeto.
+            <td>Relatório Anual</td>//Nome do quarto projeto.
+            <td>Zara Larsson</td>//Nome do responsável.
+            <td>31/07/2025</td>//Data de prazo.
+            <td><span class="badge badge-pendente">PENDENTE</span></td>//Mostra o estado com uma etiqueta de ainda não começado.
+          </tr>//Fecha a quarta linha.
+          <tr>//Cria a quinta linha de dados.
+            <td>05</td>//Número do quinto projeto.
+            <td>Campanha Marketing</td>//Nome do quinto projeto.
+            <td>Laura Ribeiro</td>//Nome do responsável.
+            <td>20/05/2025</td>//Data de prazo.
+            <td><span class="badge badge-em-curso">EM CURSO</span></td>//Mostra o estado atual deste projeto.
+          </tr>//Fecha a quinta linha.
+          <tr>//Cria a sexta linha de dados.
+            <td>06</td>//Número do sexto projeto.
+            <td>Migração Servidores</td>//Nome do sexto projeto.
+            <td>Beatriz Carrascal</td>//Nome do responsável.
+            <td>10/03/2025</td>//Data de prazo.
+            <td><span class="badge badge-concluido">CONCLUÍDO</span></td>//Mostra o estado com uma etiqueta de terminado.
+          </tr>//Fecha a sexta linha.
+        </tbody>//Fecha a zona de informações da tabela.
+      </table>//Termina e fecha a tabela por completo.
 
-    </div>
+    </div>//Fecha a caixa do texto e tabela principal.
 
-  </div>
+  </div>//Fecha a caixa que juntava o menu e as informações.
 
-  <footer>
-    <div class="cr">Copyright 2026 &copy; Gestão de Projetos</div>
-  </footer>
+  <footer>//Começa a parte de baixo (o rodapé) do site.
+    <div class="cr">Copyright 2026 &copy; Gestão de Projetos</div>//Escreve o texto final, onde o código &copy; desenha o símbolo do copyright (©).
+  </footer>//Fecha a parte de baixo do site.
 
-</div>
+</div>//Fecha a caixa gigante que guardava o site todo (#all).
 
-</body>
-</html>
+</body>//Fecha a zona visível do site.
+</html>//Fecha o ficheiro de código por completo.
