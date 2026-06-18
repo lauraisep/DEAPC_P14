@@ -1,19 +1,27 @@
 <?php
+// Inicia o sistema de sessões para verificar o estado do utilizador
 session_start();
+// Importa as configurações de ligação à base de dados
 include_once 'ligacao.php';
 
-// Se não estiver logado, manda para o login
+// Proteção da página: se a variável de sessão 'utilizador' não estiver definida, significa que não fez login
 if (!isset($_SESSION['utilizador'])) {
+    // Redireciona imediatamente o utilizador invasor para o formulário de login
     header("Location: ../login.html");
+    // Trava o script por segurança
     exit();
 }
 
+// Guarda o nome do utilizador "logado" numa variável para facilitar a manipulação
 $user = $_SESSION['utilizador'];
 
-// Procura o último acesso na base de dados SQLite
+// Prepara uma consulta para ir buscar o histórico do campo 'ultimo_acesso' do utilizador em causa
 $stmt = $ligacao->prepare("SELECT ultimo_acesso FROM utilizadores WHERE username = :user");
+// Vincula com segurança a variável da sessão ao marcador SQL
 $stmt->bindValue(':user', $user, SQLITE3_TEXT);
+// Corre a pesquisa na base de dados
 $resultado = $stmt->execute();
+// Transforma o retorno numa estrutura de dados legível pelo PHP
 $dados = $resultado->fetchArray(SQLITE3_ASSOC);
 ?>
 
@@ -38,9 +46,12 @@ $dados = $resultado->fetchArray(SQLITE3_ASSOC);
     <div class="info-box">
         <strong>Último acesso registado:</strong><br>
         <?php 
+        // Valida se o dado retornado não está vazio e se é diferente da palavra string 'Nunca'
         if (!empty($dados['ultimo_acesso']) && $dados['ultimo_acesso'] !== 'Nunca') {
+            // Converte a string de data americana e formata-a para o padrão português (Dia/Mês/Ano às Horas:Minutos:Segundos)
             echo date('d/m/Y às H:i:s', strtotime($dados['ultimo_acesso']));
         } else {
+            // Mensagem caso não exista histórico prévio
             echo "Este é o teu primeiro acesso.";
         }
         ?>

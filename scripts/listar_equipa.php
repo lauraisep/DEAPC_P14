@@ -3,6 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+// Retorna uma string estruturada validando que o script responsável pelo mapeamento da equipa está acessível e funcional, simulando a leitura de membros da equipa
 echo "\n==================================================\n";
 echo "   [DEBUG CLI - US4] LISTAGEM DA EQUIPA           \n";
 echo "==================================================\n";

@@ -1,89 +1,105 @@
+/* Aplica estilos ao corpo inteiro de todas as páginas */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
-  margin: 10px;
+  font-family: Arial, sans-serif; /* Define a fonte do texto*/
+  background-color: #ffffff; /* Define a cor de fundo como branco */
+  color: #000000; /* Define a cor do texto como preto */
+  margin: 10px; /* Cria uma margem de segurança de 10 píxeis a toda a volta da página */
 }
 
+/* Aplica estilos aos títulos principais (Tag h1) */
 h1 {
-  background-color: #cccccc;
-  color: #000000;
-  text-align: center;
-  padding: 10px;
+  background-color: #cccccc; /* Define uma cor de fundo cinzenta clara para o título */
+  color: #000000; /* Define a cor do texto do título como preto */
+  text-align: center; /* Centra o texto do título horizontalmente */
+  padding: 10px; /* Cria um espaçamento interno de 10 píxeis entre o texto e a borda do fundo */
 }
 
+/* Aplica estilos aos subtítulos (Tag h2) */
 h2 {
-  color: #0000ff;
-  border-bottom: 1px solid #000000;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  color: #0000ff; /* Define a cor do texto como azul */
+  border-bottom: 1px solid #000000; /* Cria uma linha preta sólida de 1 píxel logo abaixo do subtítulo */
+  margin-top: 15px; /* Espaço exterior de 15 píxeis acima do h2 */
+  margin-bottom: 15px; /* Espaço exterior de 15 píxeis abaixo do h2 */
 }
 
+/* Aplica estilos a todos os links (Tag a) */
 a {
-  color: #0000ff;
+  color: #0000ff; /* Define a cor padrão dos links como azul */
 }
 
+/* Altera o aspeto dos links que o utilizador já clicou/visitou anteriormente */
 a:visited {
-  color: purple;
+  color: purple; /* Transforma a cor do link visitado em roxo */
 }
 
+/* Aplica estilos ao contentor da lista do menu de navegação */
 nav ul {
-  list-style-type: none;
-  background-color: #eeeeee;
-  padding: 5px;
+  list-style-type: none; /* Remove as bolinhas/pontos padrão da lista predefinida */
+  background-color: #eeeeee; /* Define um fundo cinzento muito claro para a barra de menu */
+  padding: 5px; /* Espaçamento interno de 5 píxeis dentro do menu */
 }
 
+/* Aplica estilos a cada item individual do menu (as opções) */
 nav ul li {
-  display: inline; 
-  margin-right: 15px;
+  display: inline; /* Força os itens a ficarem lado a lado (na horizontal) em vez de empilhados */
+  margin-right: 15px; /* Cria um espaço de 15 píxeis à direita de cada item para que não fiquem colados */
 }
 
+/* Aplica estilos aos links que estão especificamente dentro do menu de navegação */
 nav ul li a {
-  text-decoration: none;
-  font-weight: bold;
+  text-decoration: none; /* Remove o sublinhado padrão dos links no menu */
+  font-weight: bold; /* Torna o texto do menu em negrito */
 }
 
+/* Aplica estilos globais para todas as tabelas */
 table {
-  width: 100%;
-  border: 1px solid #000000;
-  margin-top: 10px;
+  width: 100%; width: 100%; /* Força a tabela a esticar até ocupar 100% da largura do ecrã disponível */
+  border: 1px solid #000000; /* Coloca uma borda preta sólida de 1 píxel à volta da tabela */
+  margin-top: 10px; /* Afasta a tabela 10 píxeis do elemento que estiver acima dela */
 }
 
+/* Aplica estilos simultaneamente às células de cabeçalho (th) e células normais (td) */
 th, td {
-  border: 1px solid #000000;
-  padding: 5px;
+  border: 1px solid #000000; /* Desenha uma borda preta de 1 píxel à volta de cada célula individual */
+  padding: 5px; /* Dá um espaçamento interno de 5 píxeis para o texto não colar nas bordas */
 }
 
+/* Aplica estilos específicos à linha de cabeçalho da tabela */
 thead {
-  background-color: #dddddd;
+  background-color: #dddddd; /* Define um fundo cinzento claro para a linha de cabeçalho */
 }
 
+/* Classe utilitária para posicionar a zona de login */
 .login-container {
-  text-align: right;
-  margin-bottom: 10px;
+  text-align: right; /* Alinha o botão ou texto de login totalmente à direita */
+  margin-bottom: 10px; /* Afasta este bloco 10 píxeis do conteúdo que vem abaixo */
 }
 
+/* Estilização conjunta dos botões de Login e de Exportar Calendário */
 .btn-login, .btn-export {
-  background-color: #dddddd;
-  border: 1px solid #000000;
-  padding: 3px 5px;
-  text-decoration: none;
-  color: #000000;
+  background-color: #dddddd; /* Define a cor de fundo do botão como cinzento */
+  border: 1px solid #000000; /* Cria uma borda preta fina de 1 píxel */
+  padding: 3px 5px; /* Define o tamanho interno: 3 píxeis acima/abaixo e 5 píxeis aos lados */
+  text-decoration: none; /* Garante que o texto (que é um link) não fica sublinhado */
+  color: #000000; /* Define a cor do texto do botão como preto */
 }
 
+/* Classe base para os emblemas (badges) de estado na tabela */
 .badge {
-  font-weight: bold;
+  font-weight: bold; /* Torna o texto do estado sempre em negrito */
 }
-.badge-em-curso  { color: blue; }
-.badge-concluido { color: green; }
-.badge-pendente  { color: orange; }
-.badge-atrasado  { color: red; }
+/* Classes específicas que mudam a cor do texto dependendo do estado da tarefa */
+.badge-em-curso  { color: blue; } /* Se estiver em curso, o texto fica azul */
+.badge-concluido { color: green; } /* Se estiver concluído, o texto fica verde */
+.badge-pendente  { color: orange; } /* Se estiver pendente, o texto fica cor-de-laranja */
+.badge-atrasado  { color: red; } /* Se estiver atrasado, o texto fica vermelho */
 
+/* Aplica estilos estruturais idênticos a blocos de informação (cards, membros da equipa e eventos) */
 .card, .team-member, .evento-card {
-  border: 1px solid #000000;
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #fafafa;
+  border: 1px solid #000000; /* Moldura preta fina ao redor do bloco */
+  padding: 10px; /* Espaço livre interno de 10 píxeis em todos os lados */
+  margin-bottom: 10px; /* Empurra o bloco seguinte 10 píxeis para baixo, separando-os */
+  background-color: #fafafa; /* Define uma cor de fundo quase branca para o bloco */
 }
 
 .card .num {
@@ -109,17 +125,21 @@ thead {
   padding: 15px;
 }
 
+
 .input-group {
   margin-bottom: 10px;
 }
+
 
 .input-group label {
   display: block;
 }
 
+
 .input-group input {
   width: 95%;
 }
+
 
 .login-btn {
   width: 100%;
@@ -128,6 +148,7 @@ thead {
   border: 1px solid #000000;
   cursor: pointer;
 }
+
 
 footer {
   margin-top: 20px;
