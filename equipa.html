@@ -1,62 +1,62 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
+<!DOCTYPE html>//Diz ao navegador que este é um documento HTML5 (a versão mais recente).
+<html>//A tag principal que guarda todo o código da página.
+<head>//O cabeçalho da página. Aqui ficam as configurações escondidas que o utilizador não vê no ecrã.
+  <meta charset="UTF-8">//Garante que os acentos (como á, ç, õ) aparecem bem e sem erros no site.
+  <link rel="stylesheet" href="styles/style.css">//Liga a página ao ficheiro de estilos (CSS) para dar cores, mudar as letras e pôr o site bonito.
+</head>//Fecha a zona de configurações.
+<body>//O corpo do site. Tudo o que estiver aqui dentro vai aparecer escrito ou desenhado no ecrã. 
 
-<div id="all">
-  <header>
-    <h1>// GESTÃO DE PROJETOS</h1>
-  </header>
+<div id="all">//Uma caixa gigante que junta o site todo lá dentro para ser mais fácil de organizar.
+  <header>//A parte de cima (o topo) do site.
+    <h1>// GESTÃO DE PROJETOS</h1>//O título maior e mais importante da página.
+  </header>//Fecha a parte de cima do site.
 
-  <div class="main-container">
-    <nav>
-      <ul>
-        <li><a href="index.html">📁 Projetos</a></li>
-        <li><a href="equipa.html">👥 Equipa</a></li>
-        <li><a href="tarefas.html">📋 Tarefas</a></li>
-        <li><a href="calendario.html">📅 Calendário</a></li>
-      </ul>
-    </nav>
+  <div class="main-container">//Uma caixa que junta o menu e as informações para ficarem bem arrumadas no meio do ecrã.
+    <nav>//Indica que ali está o menu de navegação do site.
+      <ul>//Começa uma lista de tópicos (com pontos).
+        <li><a href="index.html">📁 Projetos</a></li>//O primeiro botão do menu, que leva à página inicial dos Projetos.
+        <li><a href="equipa.html">👥 Equipa</a></li>//O segundo botão do menu, que leva à página atual da Equipa.
+        <li><a href="tarefas.html">📋 Tarefas</a></li>//O terceiro botão do menu, que leva à página das Tarefas.
+        <li><a href="calendario.html">📅 Calendário</a></li>//O quarto botão do menu, que leva à página do Calendário.
+      </ul>//Fecha a lista do menu.
+    </nav>//Fecha o menu de navegação.
 
-    <div id="texto">
-      <h2>👥 Membros da Equipa</h2>
-      <p>Lista de programadores e gestores do projeto:</p>
+    <div id="texto">//Uma caixa para guardar os textos e informações principais da página.
+      <h2>👥 Membros da Equipa</h2>//Um título médio para a zona dos membros da equipa.
+      <p>Lista de programadores e gestores do projeto:</p>//Um parágrafo de texto normal.
 
-      <div class="team-grid">
+      <div class="team-grid">//Uma caixa especial para organizar os cartões das pessoas em formato de grelha (lado a lado).
 
-        <div class="team-member">
-          <div class="member-avatar">LR</div>
-          <h3>Laura Ribeiro</h3>
-          <p class="role">Gestora de Projeto</p>
-          <p class="bio">Responsável pela coordenação geral e planeamento das tarefas da equipa.</p>
-        </div>
+        <div class="team-member">//Cria o primeiro "cartão" (uma moldura) para os dados da Laura Ribeiro.
+          <div class="member-avatar">LR</div>//Cria um espaço redondo ou quadrado pequeno com as iniciais do nome da Laura.
+          <h3>Laura Ribeiro</h3>//Um título pequeno com o nome da pessoa.
+          <p class="role">Gestora de Projeto</p>//Um texto formatado para mostrar o cargo ou função que ela desempenha.
+          <p class="bio">Responsável pela coordenação geral e planeamento das tarefas da equipa.</p>//Um parágrafo com uma breve descrição do que ela faz.
+        </div>//Fecha o cartão da Laura Ribeiro.
 
-        <div class="team-member">
-          <div class="member-avatar">BC</div>
-          <h3>Beatriz Carrascal</h3>
-          <p class="role">Programadora Mobile</p>
-          <p class="bio">Trabalha no desenvolvimento das aplicações e integração com APIs de mapas.</p>
-        </div>
+        <div class="team-member">//Cria o segundo "cartão" (uma moldura) para a Beatriz Carrascal.
+          <div class="member-avatar">BC</div>//Espaço com as iniciais do nome da Beatriz.
+          <h3>Beatriz Carrascal</h3>//Nome da segunda pessoa da equipa.
+          <p class="role">Programadora Mobile</p>//Cargo ou função da Beatriz.
+          <p class="bio">Trabalha no desenvolvimento das aplicações e integração com APIs de mapas.</p>//Descrição das tarefas da Beatriz.
+        </div>//Fecha o cartão da Beatriz Carrascal.
 
-        <div class="team-member">
-          <div class="member-avatar">HT</div>
-          <h3>Helena Teixeira</h3>
-          <p class="role">Administradora de BD</p>
-          <p class="bio">Focada na modelagem lógica do esquema de tabelas e segurança do CRM.</p>
-        </div>
+        <div class="team-member">//Cria o terceiro "cartão" (uma moldura) para a Helena Teixeira.
+          <div class="member-avatar">HT</div>//Espaço com as iniciais do nome da Helena.
+          <h3>Helena Teixeira</h3>//Nome da terceira pessoa da equipa.
+          <p class="role">Administradora de BD</p>//Cargo ou função da Helena.
+          <p class="bio">Focada na modelagem lógica do esquema de tabelas e segurança do CRM.</p>//Descrição das tarefas da Helena.
+        </div>//Fecha o cartão da Helena Teixeira.
 
-      </div>
-    </div>
-  </div>
+      </div>//Fecha a caixa da grelha que organizava todos os cartões da equipa.
+    </div>//Fecha a caixa do texto principal.
+  </div>//Fecha a caixa que organizava o menu e o conteúdo.
 
-  <footer>
-    <div class="cr">Copyright 2026 &copy; Gestão de Projetos</div>
-  </footer>
+  <footer>//Começa a parte de baixo (o rodapé) do site.
+    <div class="cr">Copyright 2026 &copy; Gestão de Projetos</div>//Escreve o texto final. O código &copy; serve para desenhar o símbolo do copyright (©).
+  </footer>//Fecha a parte de baixo do site.
 
-</div>
+</div>//Fecha a caixa gigante que guardava o site todo (#all).
 
-</body>
-</html>
+</body>//Fecha a zona visível do site.
+</html>//Fecha o ficheiro de código por completo.
