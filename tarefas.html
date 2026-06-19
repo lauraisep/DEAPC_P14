@@ -1,117 +1,117 @@
-<!DOCTYPE html>//Diz ao navegador que este é um documento HTML5 (a versão mais recente).
-<html>//A tag principal que guarda todo o código da página.
-<head>//O cabeçalho da página. Aqui ficam as configurações escondidas que o utilizador não vê no ecrã.
-  <meta charset="UTF-8">//Garante que os acentos (como á, ç, õ) aparecem bem e sem erros no site.
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">//Faz com que o site se adapte bem ao tamanho de qualquer ecrã, como telemóveis ou computadores.
-  <title>Gestão de Projetos - Tarefas</title>//Define o título que aparece na aba/guia do navegador de internet.
-  <link rel="stylesheet" href="styles/style.css">//Liga a página ao ficheiro de estilos (CSS) para dar cores, mudar as letras e pôr o site bonito.
-</head>//Fecha a zona de configurações.
-<body>//O corpo do site. Tudo o que estiver aqui dentro vai aparecer escrito ou desenhado no ecrã.
+<!DOCTYPE html> <!-- Diz ao navegador que este é um documento HTML5 -->
+<html> <!-- A tag principal que guarda todo o código da página -->
+<head> <!-- O cabeçalho da página. Aqui ficam as configurações escondidas que o utilizador não vê no ecrã -->
+  <meta charset="UTF-8"><!-- Garante que os acentos (como á, ç, õ) aparecem bem e sem erros no site -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz com que o site se adapte bem ao tamanho de qualquer ecrã, como telemóveis ou computadores -->
+  <title>Gestão de Projetos - Tarefas</title> <!-- Define o título que aparece na aba/guia do navegador de internet -->
+  <link rel="stylesheet" href="styles/style.css"> <!-- Liga a página ao ficheiro de estilos (CSS) para dar cores, mudar as letras e pôr o site bonito -->
+</head> <!-- Fecha a zona de configurações. -->
+<body> <!-- O corpo do site. Tudo o que estiver aqui dentro vai aparecer escrito ou desenhado no ecrã-->
 
-<div id="all">//Uma caixa gigante que junta o site todo lá dentro para ser mais fácil de organizar.
+<div id="all"> <!-- Uma caixa gigante que junta o site todo lá dentro para ser mais fácil de organizar-->
 
-  <header>//A parte de cima (o topo) do site.
-    <h1>// GESTÃO DE PROJETOS</h1>//O título maior e mais importante da página.
-  </header>//Fecha a parte de cima do site.
+  <header> <!-- A parte de cima (o topo) do site-->
+    <h1> <!--  GESTÃO DE PROJETOS</h1><!-- O título maior e mais importante da página-->
+  </header> <!-- Fecha a parte de cima do site-->
 
-  <div class="main-wrap">//Uma caixa que junta o menu e as informações para ficarem bem arrumadas no ecrã.
+  <div class="main-wrap"> <!-- Uma caixa que junta o menu e as informações para ficarem bem arrumadas no ecrã-->
 
-    <nav>//Indica que ali está o menu de navegação do site.
-      <ul>//Começa uma lista de tópicos (com pontos).
-        <li><a href="index.html">📁 Projetos</a></li>//O primeiro botão do menu, que leva à página de Projetos.
-        <li><a href="equipa.html">👥 Equipa</a></li>//O segundo botão do menu, que leva à página da Equipa.
-        <li class="active"><a href="tarefas.html">📋 Tarefas</a></li>//O terceiro botão do menu, que leva à página atual de Tarefas, marcado com a classe "active" para mostrar que estamos nesta página.
-        <li><a href="calendario.html">📅 Calendário</a></li>//O quarto botão do menu, que leva à página do Calendário.
-      </ul>//Fecha a lista do menu.
-    </nav>//Fecha o menu de navegação.
+    <nav> <!-- Indica que ali está o menu de navegação do site-->
+      <ul> <!-- Começa uma lista de tópicos (com pontos)-->
+        <li><a href="index.html">📁 Projetos</a></li><!-- O primeiro botão do menu, que leva à página de Projetos-->
+        <li><a href="equipa.html">👥 Equipa</a></li><!-- O segundo botão do menu, que leva à página da Equipa-->
+        <li class="active"><a href="tarefas.html">📋 Tarefas</a></li><!-- O terceiro botão do menu, que leva à página atual de Tarefas, marcado com a classe "active" para mostrar que estamos nesta página-->
+        <li><a href="calendario.html">📅 Calendário</a></li><!-- O quarto botão do menu, que leva à página do Calendário-->
+      </ul> <!-- Fecha a lista do menu-->
+    </nav> <!-- Fecha o menu de navegação-->
 
-    <div id="texto">//Uma caixa para guardar as informações principais desta página.
+    <div id="texto"> <!-- Uma caixa para guardar as informações principais desta página-->
 
-      <div class="cards">//Uma caixa para agrupar pequenos cartões com resumos de números.
-        <div class="card">//Cria o primeiro pequeno cartão para a contagem de tarefas.
-          <span class="num">6</span><br>//Mostra o número 6 destacado e salta uma linha.
-          <span class="label">Total Tarefas</span>//Escreve o texto explicativo do número abaixo dele
-        </div>//Fecha o primeiro cartão de resumo.
-        <div class="card">//Cria o segundo pequeno cartão.
-          <span class="num">2</span><br>//Mostra o número 2 destacado e salta uma linha.
-          <span class="label">Em Curso</span>//Escreve o texto explicativo para as tarefas a decorrer.
-        </div>//Fecha o segundo cartão de resumo.
-        <div class="card">//Cria o terceiro pequeno cartão.
-          <span class="num">2</span><br>//Mostra o número 2 destacado e salta uma linha.
-          <span class="label">Concluídas</span>//Escreve o texto explicativo para as tarefas já feitas.
-        </div>//Fecha o terceiro cartão de resumo.
-        <div class="card">//Cria o quarto pequeno cartão.
-          <span class="num">1</span><br>//Mostra o número 1 destacado e salta uma linha.
-          <span class="label">Atrasada</span>//Escreve o texto explicativo para as tarefas fora do prazo.
-        </div>//Fecha o quarto cartão de resumo.
-      </div>//Fecha a caixa que juntava todos os quatro cartões de números.
+      <div class="cards"> <!-- Uma caixa para agrupar pequenos cartões com resumos de números-->
+        <div class="card"> <!-- Cria o primeiro pequeno cartão para a contagem de tarefas-->
+          <span class="num">6</span><br> <!-- Mostra o número 6 destacado e salta uma linha-->
+          <span class="label">Total Tarefas</span> <!-- Escreve o texto explicativo do número abaixo dele-->
+        </div> <!-- Fecha o primeiro cartão de resumo-->
+        <div class="card"> <!-- Cria o segundo pequeno cartão-->
+          <span class="num">2</span><br> <!-- Mostra o número 2 destacado e salta uma linha-->
+          <span class="label">Em Curso</span> <!-- Escreve o texto explicativo para as tarefas a decorrer-->
+        </div> <!-- Fecha o segundo cartão de resumo-->
+        <div class="card"> <!-- Cria o terceiro pequeno cartão-->
+          <span class="num">2</span><br> <!-- Mostra o número 2 destacado e salta uma linha-->
+          <span class="label">Concluídas</span> <!-- Escreve o texto explicativo para as tarefas já feitas-->
+        </div> <!-- Fecha o terceiro cartão de resumo-->
+        <div class="card"> <!-- Cria o quarto pequeno cartão-->
+          <span class="num">1</span><br> <!-- Mostra o número 1 destacado e salta uma linha-->
+          <span class="label">Atrasada</span> <!-- Escreve o texto explicativo para as tarefas fora do prazo-->
+        </div> <!-- Fecha o quarto cartão de resumo-->
+      </div> <!-- Fecha a caixa que juntava todos os quatro cartões de números-->
 
-      <h2>LISTA DE TAREFAS</h2>//Um título médio para identificar a tabela de tarefas.
+      <h2>LISTA DE TAREFAS</h2> <!-- Um título médio para identificar a tabela de tarefas-->
 
-      <table>//Cria uma tabela para organizar a informação em linhas e colunas.
-        <thead>//Abre a zona do cabeçalho da tabela (os títulos das colunas).
-          <tr>//Cria a linha de títulos da tabela.
-            <th>#</th>//Define a coluna para o número da tarefa.
-            <th>Tarefa</th>//Define a coluna para o nome da tarefa.
-            <th>Responsável</th>// Define a coluna para o nome de quem vai fazer a tarefa.
-            <th>Prazo</th>//Define a coluna para a data de entrega.
-            <th>Estado</th>//Define a coluna para o andamento da tarefa.
-          </tr>//Fecha a linha de títulos da tabela.
-        </thead>//Fecha a zona do cabeçalho da tabela.
-        <tbody>//Abre o corpo da tabela, onde vão ficar as linhas com as informações reais.
-          <tr>//Cria a primeira linha com informações.
-            <td>01</td>//Escreve o número da primeira tarefa.
-            <td>Desenvolver interface principal</td>//Escreve o nome da primeira tarefa.
-            <td>Laura Ribeiro</td> //Escreve o nome da responsável.
-            <td>30/06/2025</td>//Escreve a data de prazo.
-            <td><span class="badge badge-em-curso">EM CURSO</span></td>//Mostra o estado atual com uma etiqueta colorida.
-          </tr>//Fecha a primeira linha de informações.
-          <tr>//Cria a segunda linha com informações.
-            <td>02</td>//Número da segunda tarefa.
-            <td>Integração de API de Mapas</td>//Nome da segunda tarefa.
-            <td>Beatriz Carrascal</td>// Nome da responsável.
-            <td>15/05/2025</td>//Data de prazo.
-            <td><span class="badge badge-atrasado">ATRASADO</span></td>//Mostra o estado com uma etiqueta de atraso.
-          </tr>//Fecha a segunda linha.
-          <tr>//Cria a terceira linha com informações.
-            <td>03</td>//Número da terceira tarefa.
-            <td>Modelagem do Esquema de Tabelas</td>//Nome da terceira tarefa.
-            <td>Helena Teixeira</td> //Nome da responsável.
-            <td>01/04/2025</td>//Data de prazo.
-            <td><span class="badge badge-concluido">CONCLUÍDO</span></td>//Mostra o estado com uma etiqueta de terminado.
-          </tr>//Fecha a terceira linha.
-          <tr>//Cria a quarta linha com informações.
-            <td>04</td>//Número da quarta tarefa.
-            <td>Levantamento de Dados Financeiros</td>//Nome da quarta tarefa.
-            <td>Zara Larsson</td>//Nome da responsável.
-            <td>31/07/2025</td>//Data de prazo.
-            <td><span class="badge badge-pendente">PENDENTE</span></td>//Mostra o estado com uma etiqueta de ainda não começado.  
-          </tr>//Fecha a quarta linha.
-          <tr>//Cria a quinta linha com informações.
-            <td>05</td>//Número da quinta tarefa.
-            <td>Campanha de Divulgação e Marketing</td>//Nome da quinta tarefa.
-            <td>Laura Ribeiro</td>//Nome da responsável.
-            <td>20/05/2025</td>//Data de prazo.
-            <td><span class="badge badge-em-curso">EM CURSO</span></td>//Mostra o estado atual da tarefa.
-          </tr>//Fecha a quinta linha.
-          <tr>//Cria a sexta linha com informações.
-            <td>06</td>//Número da sexta tarefa.
-            <td>Migração e Otimização de Servidores</td>//Nome da sexta tarefa.
-            <td>Beatriz Carrascal</td>//Nome da responsável.
-            <td>10/03/2025</td>//Data de prazo.
-            <td><span class="badge badge-concluido">CONCLUÍDO</span></td>//Mostra o estado com uma etiqueta de terminado.
-          </tr>//Fecha a sexta linha.
-        </tbody>//Fecha a zona de informações da tabela.
-      </table>//Termina e fecha a tabela por completo.
+      <table> <!-- Cria uma tabela para organizar a informação em linhas e colunas-->
+        <thead> <!-- Abre a zona do cabeçalho da tabela (os títulos das colunas)-->
+          <tr> <!-- Cria a linha de títulos da tabela-->
+            <th>#</th> <!-- Define a coluna para o número da tarefa-->
+            <th>Tarefa</th> <!-- Define a coluna para o nome da tarefa-->
+            <th>Responsável</th> <!--  Define a coluna para o nome de quem vai fazer a tarefa-->
+            <th>Prazo</th> <!-- Define a coluna para a data de entrega-->
+            <th>Estado</th> <!-- Define a coluna para o andamento da tarefa-->
+          </tr> <!-- Fecha a linha de títulos da tabela-->
+        </thead> <!-- Fecha a zona do cabeçalho da tabela-->
+        <tbody> <!-- Abre o corpo da tabela, onde vão ficar as linhas com as informações reais-->
+          <tr> <!-- Cria a primeira linha com informações-->
+            <td>01</td> <!-- Escreve o número da primeira tarefa-->
+            <td>Desenvolver interface principal</td> <!-- Escreve o nome da primeira tarefa-->
+            <td>Laura Ribeiro</td> <!-- Escreve o nome da responsável-->
+            <td>30/06/2025</td> <!-- Escreve a data de prazo-->
+            <td><span class="badge badge-em-curso">EM CURSO</span></td> <!-- Mostra o estado atual com uma etiqueta colorida-->
+          </tr> <!-- Fecha a primeira linha de informações-->
+          <tr> <!-- Cria a segunda linha com informações-->
+            <td>02</td> <!-- Número da segunda tarefa-->
+            <td>Integração de API de Mapas</td> <!-- Nome da segunda tarefa-->
+            <td>Beatriz Carrascal</td> <!--  Nome da responsável-->
+            <td>15/05/2025</td> <!-- Data de prazo-->
+            <td><span class="badge badge-atrasado">ATRASADO</span></td> <!-- Mostra o estado com uma etiqueta de atraso-->
+          </tr> <!-- Fecha a segunda linha-->
+          <tr> <!-- Cria a terceira linha com informações-->
+            <td>03</td> <!-- Número da terceira tarefa-->
+            <td>Modelagem do Esquema de Tabelas</td> <!-- Nome da terceira tarefa-->
+            <td>Helena Teixeira</td> <!-- Nome da responsável-->
+            <td>01/04/2025</td> <!-- Data de prazo-->
+            <td><span class="badge badge-concluido">CONCLUÍDO</span></td> <!-- Mostra o estado com uma etiqueta de terminado-->
+          </tr> <!-- Fecha a terceira linha-->
+          <tr> <!-- Cria a quarta linha com informações-->
+            <td>04</td><!-- Número da quarta tarefa-->
+            <td>Levantamento de Dados Financeiros</td> <!-- Nome da quarta tarefa-->
+            <td>Zara Larsson</td> <!-- Nome da responsável-->
+            <td>31/07/2025</td> <!-- Data de prazo-->
+            <td><span class="badge badge-pendente">PENDENTE</span></td> <!-- Mostra o estado com uma etiqueta de ainda não começado-->  
+          </tr> <!-- Fecha a quarta linha-->
+          <tr> <!-- Cria a quinta linha com informações-->
+            <td>05</td> <!-- Número da quinta tarefa-->
+            <td>Campanha de Divulgação e Marketing</td> <!-- Nome da quinta tarefa-->
+            <td>Laura Ribeiro</td> <!-- Nome da responsável-->
+            <td>20/05/2025</td> <!-- Data de prazo-->
+            <td><span class="badge badge-em-curso">EM CURSO</span></td> <!-- Mostra o estado atual da tarefa-->
+          </tr> <!-- Fecha a quinta linha-->
+          <tr> <!-- Cria a sexta linha com informações-->
+            <td>06</td> <!-- Número da sexta tarefa-->
+            <td>Migração e Otimização de Servidores</td> <!-- Nome da sexta tarefa-->
+            <td>Beatriz Carrascal</td> <!-- Nome da responsável-->
+            <td>10/03/2025</td> <!-- Data de prazo-->
+            <td><span class="badge badge-concluido">CONCLUÍDO</span></td> <!-- Mostra o estado com uma etiqueta de terminado-->
+          </tr> <!-- Fecha a sexta linha-->
+        </tbody> <!-- Fecha a zona de informações da tabela-->
+      </table> <!-- Termina e fecha a tabela por completo-->
 
-    </div>//Fecha a caixa do texto e tabela principal.
-  </div>//Fecha a caixa que juntava o menu e as informações.
+    </div> <!-- Fecha a caixa do texto e tabela principal-->
+  </div> <!-- Fecha a caixa que juntava o menu e as informações-->
 
-  <footer>//Começa a parte de baixo (o rodapé) do site.
-    <div class="cr">Copyright 2026 &copy; Gestão de Projetos</div//Escreve o texto final, onde o código &copy; desenha o símbolo do copyright (©).
-  </footer>//Fecha a parte de baixo do site.
+  <footer> <!-- Começa a parte de baixo (o rodapé) do site-->
+    <div class="cr">Copyright 2026 &copy; Gestão de Projetos</div> <!-- Escreve o texto final, onde o código &copy; desenha o símbolo do copyright (©)-->
+  </footer> <!-- Fecha a parte de baixo do site-->
 
-</div>//Fecha a caixa gigante que guardava o site todo (#all).
+</div> <!-- Fecha a caixa gigante que guardava o site todo (#all)-->
 
-</body>//Fecha a zona visível do site.
-</html>//Fecha o ficheiro de código por completo.
+</body> <!-- Fecha a zona visível do site-->
+</html> <!-- Fecha o ficheiro de código por completo-->
