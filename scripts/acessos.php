@@ -8,10 +8,10 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Conecta-se à base de dados SQLite e abre o ficheiro "projeto.db" para leitura e escrita, criando-o se não existir
-$db = new SQLite3("projeto.db");
+$db = new SQLite3("../projeto.db");
 // Executa uma pesquisa SQL extraindo todas as linhas e colunas existentes na tabela 'acessos' e guarda o resultado em $dados
 $dados = $db->query("SELECT * FROM acessos");
 
 // Inclui e executa o ficheiro visual HTML 'acessos.html', permitindo que a variável '$dados' liste a tabela no ecrã
-include "acessos.html";
+include "../acessos.html";
 ?>
