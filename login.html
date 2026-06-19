@@ -1,36 +1,36 @@
-<!DOCTYPE html> <!-- Diz ao navegador que este é um documento HTML5 (a versão mais recente)-->
-<html lang="pt"> <!--A tag principal que guarda todo o código, indicando que a página está em português (lang="pt")-->
-<head> <!-- O cabeçalho da página. Aqui ficam as configurações escondidas que o utilizador não vê no ecrã-->
-  <meta charset="UTF-8"> <!-- Garante que os acentos (como á, ç, õ) aparecem bem e sem erros no site-->
-  <title>Login - Gestão de Projetos</title> <!-- Define o título que aparece na aba/guia do navegador de internet-->
-  <link rel="stylesheet" href="styles/style.css"> <!-- Liga a página ao ficheiro de estilos (CSS) para dar cores, mudar as letras e pôr o site bonito-->
+<!DOCTYPE html> <!-- Diz ao navegador que este é um documento HTML5 (a versão mais recente) -->
+<html lang="pt"> <!--A tag principal que guarda todo o código, indicando que a página está em português (lang="pt") -->
+<head> <!-- O cabeçalho da página. Aqui ficam as configurações escondidas que o utilizador não vê no ecrã -->
+  <meta charset="UTF-8"> <!-- Garante que os acentos (como á, ç, õ) aparecem bem e sem erros no site -->
+  <title>Login - Gestão de Projetos</title> <!-- Define o título que aparece na aba/guia do navegador de internet -->
+  <link rel="stylesheet" href="styles/style.css"> <!-- Liga a página ao ficheiro de estilos (CSS) para dar cores, mudar as letras e pôr o site bonito -->
 </head> <!-- Fecha a zona de configurações-->
-<body class="login-body"> <!-- O corpo do site, com uma classe especial para aplicar um fundo ou estilo próprio à página de login-->
+<body class="login-body"> <!-- O corpo do site, com uma classe especial para aplicar um fundo ou estilo próprio à página de login -->
 
-  <div class="login-card"> <!-- Cria uma caixa/moldura no centro do ecrã para guardar o formulário de login-->
-    <h2>Área de Login</h2> <!-- Um título médio para indicar a zona onde se entra no site-->
+  <div class="login-card"> <!-- Cria uma caixa/moldura no centro do ecrã para guardar o formulário de login -->
+    <h2>Área de Login</h2> <!-- Um título médio para indicar a zona onde se entra no site -->
         
-    <form id="meuFormularioID" action="scripts/login.php" method="POST"> <!-- Inicia o formulário de login. Diz que os dados vão para o ficheiro login.php de forma segura (POST) e dá um nome/identificador ao formulário-->
-      <div class="input-group"> <!-- Cria uma caixinha para juntar o texto e o campo onde se escreve o nome de utilizador-->
-        <label for="username">Utilizador:</label> <!--Escreve o texto "Utilizador:" que indica o que deve ser escrito no campo-->
-        <input type="text" id="username" name="username"> <!--Cria o campo de texto vazio para o utilizador digitar o seu nome-->
+    <form id="meuFormularioID" action="scripts/login.php" method="POST"> <!-- Inicia o formulário de login. Diz que os dados vão para o ficheiro login.php de forma segura (POST) e dá um nome/identificador ao formulário -->
+      <div class="input-group"> <!-- Cria uma caixinha para juntar o texto e o campo onde se escreve o nome de utilizador -->
+        <label for="username">Utilizador:</label> <!--Escreve o texto "Utilizador:" que indica o que deve ser escrito no campo -->
+        <input type="text" id="username" name="username"> <!--Cria o campo de texto vazio para o utilizador digitar o seu nome -->
       </div> <!--Fecha a caixinha do nome de utilizador-->
             
-      <div class="input-group"><!-- Cria outra caixinha para juntar o texto e o campo da palavra-passe-->  
-        <label for="password">Palavra-passe:</label> <!-- Escreve o texto "Palavra-passe:" ao lado do campo-->
-        <input type="password" id="password" name="password"> <!-- Cria o campo de texto para a palavra-passe. O tipo password faz com que as letras apareçam escondidas em pontos ou asteriscos-->
-      </div> <!--//Fecha a caixinha da palavra-passe-->
+      <div class="input-group"><!-- Cria outra caixinha para juntar o texto e o campo da palavra-passe -->  
+        <label for="password">Palavra-passe:</label> <!-- Escreve o texto "Palavra-passe:" ao lado do campo -->
+        <input type="password" id="password" name="password"> <!-- Cria o campo de texto para a palavra-passe. O tipo password faz com que as letras apareçam escondidas em pontos ou asteriscos -->
+      </div> <!-- Fecha a caixinha da palavra-passe -->
             
-      <p id="mensagem-erro"></p> <!--//Um parágrafo vazio que serve para mostrar avisos de erro (como "palavra-passe errada") através de programação-->
+      <p id="mensagem-erro"></p> <!-- Um parágrafo vazio que serve para mostrar avisos de erro (como "palavra-passe errada") através de programação -->
             
-      <button type="submit" class="login-btn">Entrar</button> <!--//Cria o botão "Entrar" para enviar os dados escritos no formulário-->
-    </form> <!--//Fecha o formulário de login-->
+      <button type="submit" class="login-btn">Entrar</button> <!-- Cria o botão "Entrar" para enviar os dados escritos no formulário -->
+    </form> <!-- Fecha o formulário de login-->
         
-    <p class="login-container" style="text-align: center;"> <!--// Cria um parágrafo que alinha o seu conteúdo mesmo no centro do cartão--> 
-      <a href="index.html">Voltar ao início</a> <!--//Um link simples para o utilizador clicar e regressar à página inicial (index.html)-->
-    </p> <!--//Fecha o parágrafo do link-->
-  </div> <!--//Fecha a caixa principal do cartão de login-->
+    <p class="login-container" style="text-align: center;"> <!-- Cria um parágrafo que alinha o seu conteúdo mesmo no centro do cartão --> 
+      <a href="index.html">Voltar ao início</a> <!--//Um link simples para o utilizador clicar e regressar à página inicial (index.html) -->
+    </p> <!-- Fecha o parágrafo do link -->
+  </div> <!-- Fecha a caixa principal do cartão de login -->
 
-  <script src="scripts/validacoes.js"></script> <!--//Chama um ficheiro de código (JavaScript) para verificar se os campos foram bem preenchidos antes de enviar-->
-</body> <!--//Fecha a zona visível do site-->
-</html> <!--//Fecha o ficheiro de código por completo-->
+  <script src="scripts/validacoes.js"></script> <!-- Chama um ficheiro de código (JavaScript) para verificar se os campos foram bem preenchidos antes de enviar -->
+</body> <!-- Fecha a zona visível do site -->
+</html> <!-- Fecha o ficheiro de código por completo  -->
