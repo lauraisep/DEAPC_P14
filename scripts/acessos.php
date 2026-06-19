@@ -13,4 +13,5 @@ $db = new SQLite3("projeto.db");
 $dados = $db->query("SELECT * FROM acessos");
 
 // Inclui e executa o ficheiro visual HTML 'acessos.html', permitindo que a variável '$dados' liste a tabela no ecrã
+include "acessos.html";
 ?>
